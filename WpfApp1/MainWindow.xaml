@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame  Background="GreenYellow" Grid.ColumnSpan="3"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"  Grid.ColumnSpan="3" Margin="0" >
+            <TextBlock Text="0" x:Name="lbl_weight" FontSize="30"/>
+        </StackPanel>
+        <TextBlock Text="Cân khô:" FontSize="25" 
+                   HorizontalAlignment="Center" Grid.Row="1"/>
+        <TextBlock Text="Cân nước:" Grid.Row="2" 
+                   FontSize="25" HorizontalAlignment="Center"/>
+
+        <Frame  Background="SteelBlue" Margin="2" Grid.Column="1" Grid.Row="1"/>
+        <Frame  Background="SteelBlue" Margin="2" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock Text="0" x:Name="lbl_Air" Foreground="White" FontSize="30" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Text="0" x:Name="lbl_Water" Foreground="White" FontSize="30" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="Cân Khô" FontSize="30" Click="Button_Click"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="Cân Nước" FontSize="30" Click="Button_Click"/>
+        
+        <TextBlock Text="Tỷ lệ Vàng:" FontSize="25" 
+                   HorizontalAlignment="Center" Grid.Row="3"/>
+        <TextBlock Text="Tỷ lệ Đồng:" Grid.Row="4" 
+                   FontSize="25" HorizontalAlignment="Center"/>
+
+        <Frame  Background="Gold" Margin="2" Grid.Column="1" Grid.Row="3"/>
+        <Frame  Background="Orange" Margin="2" Grid.Column="1" Grid.Row="4"/>
+        <TextBlock Text="0" Foreground="BlueViolet" x:Name="lbl_rateGold" FontSize="30" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+        <TextBlock Text="0" Foreground="DimGray" x:Name="lbl_rateBronze"  FontSize="30" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
+    </Grid>
+</Window>
